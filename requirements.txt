@@ -14,4 +14,3 @@ uvicorn==0.18.3
 mlflow
 pandas
 scikit-learn
-statsmodel

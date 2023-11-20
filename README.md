@@ -15,7 +15,8 @@ I conduct simple logistic regression analysis on the bike sharing data set provi
 **Processing:** 
 
 * I created a "demand" flag variable based off of `cnt` that flags the demand as high if there are over 4000 instances of a bike being used on a single day. 
-* I created a weather situation flag variable. The weather situation variable had the codeframe of 1 = sunny, 2 = windy, 3 = rainy and 4 = . The dummy variables allow us to use this variable more accurately as parameters in this model.
+* I created a weather situation flag variable. According to the link above, the weather situation codeframe maps to the following: 1= Clear, Few clouds, Partly cloudy, Partly cloudy, 2= Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist, 3= Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds, 4= Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog.
+   * The dummy variables allow us to use this variable more accurately as parameters in this model.
 
 **Logistic Model:**
 

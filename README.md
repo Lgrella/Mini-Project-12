@@ -1,37 +1,49 @@
-[![CI](https://github.com/nogibjj/python-ruff-template/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/python-ruff-template/actions/workflows/cicd.yml)
-## Template for Python projects with RUFF linter
+# Data Engineering Systems: Mini Project 12
 
-![1 15_rust_built_python_tools](https://github.com/nogibjj/python-ruff-template/assets/58792/db5f7bda-a977-4c67-acbe-a70fe034fbdf)
+This project focuses on MLflow as a way to log and track machine learning models. Ultimately, this lab uses MLflow to manage a machine learning project. 
 
+I chose to create a simple logistic regression machine learning model to show the benefits of using MLflow.
 
+The following steps are followed in completing this lab: 
+1) Create a simple machine-learning model
+2) Use MLflow to manage the project, including tracking metrics
 
-1. First thing to do on launch is to open a new shell and verify virtualenv is sourced.
+## Machine Learning Model
 
-Things included are:
+I conduct simple logistic regression analysis on the bike sharing data set provided by University of California, Irvine. The data set description is available at <https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset>, and the data set can be downloaded at <https://archive.ics.uci.edu/ml/machine-learning-databases/00275/Bike-Sharing-Dataset.zip>.
 
-* `Makefile`
+**Processing:** 
 
-* `Pytest`
+* I created a "demand" flag variable based off of `cnt` that flags the demand as high if there are over 4000 instances of a bike being used on a single day. 
+* I created a weather situation flag variable. The weather situation variable had the codeframe of 1 = sunny, 2 = windy, 3 = rainy and 4 = . The dummy variables allow us to use this variable more accurately as parameters in this model.
 
-* `pandas`
+**Logistic Model:**
 
-* `Ruff`:  
+* Features: temperature, humidity, windspeed, weather situation dummies
+* Target: demand
 
-Run `make lint` which runs `ruff check`.  You can find out more info on [Ruff here](https://github.com/astral-sh/ruff).
+**Model Training and Testing:**
+* Split the data into training and testing sets 
+    * Data is split based on random sampling where 75% of the data is Training, and 25% is Test data
+* Train the model on the training set
+* Predict the target values using the model on the test set (this is reported as accuracy)  
 
-* `Dockerfile`
+**MLflow Integration:**
+* Use MLflow to log parameters, metrics, and the trained model.
+* Log all parameters that are identified in the `params` dictionary.
+* Log metrics like accuracy of predicting the test set.
 
-* `GitHub copilot`
+**DevOps:**
+* Makefile is included to test formatting and linting (run `make format`, `make lint`, and `make test`)
 
-* `jupyter` and `ipython` 
+## Running the code:
+1. Open Codespaces or clone this repository
+2. run make install, if necessary
+3. Run the machine learning algorithm by running: `python main.py`
+4. Run `mlflow ui` and open browser tab to view mlflow's user interface 
+5. Saved model, artifacts, parameters etc. are found in the mlruns folder for your review
 
-* A base set of libraries for devops and web
+**MLflow UI Example screenshots**
 
-* `githubactions`
-
-## References
-
-![1 1-function-essence-of-programming](https://github.com/nogibjj/python-ruff-template/assets/58792/f7f33cd3-cff5-4014-98ea-09b6a29c7557)
-
-
-
+![mlflow2](mlflow2.png)
+![mlflow3](mlflow3.png)

@@ -16,8 +16,6 @@ def main():
     df["demand"] = np.where(df["cnt"] > 4000, 1, 0)
     df2 = pd.get_dummies(df, columns=["weathersit"], drop_first=True)
 
-    # model2 = smf.ols('cnt ~  C(weathersit) + temp + hum + windspeed',data = df).fit()
-
     features = df2[["temp", "hum", "windspeed", "weathersit_2", "weathersit_3"]]
     target = df2["demand"]
 

@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1700444923499
+current_stage: None
+description: null
+last_updated_timestamp: 1700444923499
+name: MLflow-example
+run_id: e4876b261a8c4019890a5c217fb29b75
+run_link: null
+source: file:///workspaces/Mini-Project-12/mlruns/0/e4876b261a8c4019890a5c217fb29b75/artifacts/DAY_model
+status: READY
+status_message: null
+storage_location: file:///workspaces/Mini-Project-12/mlruns/0/e4876b261a8c4019890a5c217fb29b75/artifacts/DAY_model
+user_id: null
+version: 1

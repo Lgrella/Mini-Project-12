@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/Mini-Project-12/mlruns/0/e4876b261a8c4019890a5c217fb29b75/artifacts
+end_time: 1700444923502
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e4876b261a8c4019890a5c217fb29b75
+run_name: polite-roo-875
+run_uuid: e4876b261a8c4019890a5c217fb29b75
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1700444921608
+status: 3
+tags: []
+user_id: codespace

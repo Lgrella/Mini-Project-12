@@ -40,7 +40,7 @@ I conduct simple logistic regression analysis on the bike sharing data set provi
 1. Open Codespaces or clone this repository
 2. run make install, if necessary
 3. Run the machine learning algorithm by running: `python main.py`
-4. Run `mlflow ui` and open browser tab to view mlflow's user interface 
+4. Run `mlflow ui` and open browser tab to view mlflow's user interface (ctrl-c will close this process within the terminal)
 5. Saved model, artifacts, parameters etc. are found in the mlruns folder for your review
 
 **MLflow UI Example screenshots**
